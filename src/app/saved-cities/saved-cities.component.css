@@ -1,0 +1,55 @@
+.container {
+  max-width: 400px;
+  margin: 40px auto;
+  text-align: center;
+  background: #f7f9fc;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 22px;
+  color: #113f67;
+  margin-bottom: 20px;
+}
+
+.city-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.city-list li {
+  background: white;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+.btn-remove {
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-remove:hover {
+  background: #e63946;
+}
+
+.btn-back {
+  background-color: #113f67;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}

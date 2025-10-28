@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>Saved Cities</h1>
+
+  <div *ngIf="weatherData.length === 0">
+    <p>No saved cities yet.</p>
+  </div>
+
+  <ul *ngIf="weatherData.length > 0" class="city-list">
+    <li *ngFor="let city of weatherData" class="city-card">
+      <div class="city-info">
+        <h2>{{ city.location?.name }}, {{ city.location?.country }}</h2>
+        <p class="temp">{{ city.current?.temperature }}°C</p>
+        <img [src]="city.current?.weather_icons[0]" alt="icon" />
+        <p class="desc">{{ city.current?.weather_descriptions[0] }}</p>
+      </div>
+      <button (click)="removeCity(city.location?.name)" class="btn-remove">❌ Remove</button>
+    </li>
+  </ul>
+</div>

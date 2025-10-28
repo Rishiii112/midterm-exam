@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>Weather Dashboard</h1>
+
+  <div class="search-box">
+    <input [(ngModel)]="city" placeholder="Enter city name" />
+    <button (click)="searchWeather()">Search</button>
+  </div>
+
+ 
+  <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+
+
+  <div *ngIf="weather" class="weather-card">
+    <h2>{{ weather.location?.name }}, {{ weather.location?.country }}</h2>
+    <p class="temperature">{{ weather.current?.temperature }}°C</p>
+    <img [src]="weather.current?.weather_icons[0]" alt="Weather icon" />
+    <p class="description">{{ weather.current?.weather_descriptions[0] }}</p>
+    <p>Humidity: {{ weather.current?.humidity }}%</p>
+    <p>Wind Speed: {{ weather.current?.wind_speed }} km/h</p>
+    <button (click)="saveCity(weather.location?.name)">Save City</button>
+  </div>
+</div>
